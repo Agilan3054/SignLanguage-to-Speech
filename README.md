@@ -39,11 +39,6 @@ The project includes the following main components:
 - Using gTTS library to convert predicted words into speech.
 - Generating audio files for predicted words to facilitate accessibility.
 
-### File Descriptions:
-
-- `sign_language_recognition.ipynb`: Jupyter Notebook containing the complete project code.
-- Sample images (`w.jpg`, `e.jpg`, etc.) used for prediction and visualization.
-
 ## Dependencies
 
 - Python 3.x
