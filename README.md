@@ -1,51 +1,51 @@
-# Sign Language to Speech
+# End-to-End AI-Powered Sign Language to Speech Conversion App
 
-This project aims to build a Convolutional Neural Network (CNN) to recognize sign language gestures from images using TensorFlow and Keras. The CNN model is trained on the Sign Language MNIST dataset, which consists of grayscale images of hand gestures representing letters A-Z (excluding J and Z) in American Sign Language (ASL).
+This project aims to build an end-to-end AI-powered sign language to speech conversion application, utilizing React for the frontend, TensorFlow for gesture recognition, OpenCV for image preprocessing, and gTTS for speech synthesis. The system recognizes sign language gestures and converts them into speech, enhancing accessibility for individuals with hearing impairments.
 
 ## Project Overview
 
-Sign language recognition through computer vision and machine learning plays a crucial role in bridging communication gaps for individuals with hearing impairments. By developing an automated system capable of recognizing sign language gestures, we aim to facilitate better interaction and accessibility.
+Sign language recognition using computer vision techniques and machine learning bridges communication gaps for the hearing-impaired. This project leverages deep learning and speech synthesis to automatically detect sign language gestures from images and convert them into natural speech, providing a user-friendly and accessible solution.
 
 ## Project Structure
 
-The project includes the following main components:
+The project consists of the following components:
+
+### Frontend (React):
+- A React-based frontend interface allowing users to upload sign language gesture images.
+- A responsive UI for real-time prediction feedback and speech conversion.
+
+### Backend (Flask):
+- A Flask-based backend that serves as the API for handling the image uploads and processing them through the trained model.
+- Manages communication between the frontend and the machine learning model for prediction and speech synthesis.
 
 ### Data Loading and Preprocessing:
-
-- Loading the Sign Language MNIST dataset using Pandas.
-- Preprocessing the data to prepare it for training the CNN model.
-- Reshaping and normalizing images for input to the CNN.
+- Loading and preprocessing the Sign Language MNIST dataset for training the Convolutional Neural Network (CNN).
+- Using OpenCV for real-time image preprocessing to handle different sign gestures.
 
 ### Model Building:
+- Implementing a CNN using TensorFlow and Keras for sign language gesture recognition.
+- The model architecture includes Conv2D, MaxPooling2D, Flatten, and Dense layers optimized through dropout regularization and early stopping.
+- Achieved 92% accuracy after hyperparameter tuning (learning rate, batch size).
 
-- Constructing a CNN using TensorFlow and Keras.
-- Defining layers including Conv2D, MaxPooling2D, Flatten, and Dense.
-- Compiling the model with Adam optimizer and categorical cross-entropy loss function.
+### Speech Synthesis:
+- Converting the predicted gestures to speech using Google Text-to-Speech (gTTS) and Pyttsx3 for natural audio output.
+- Speech synthesis occurs in real-time, making the interaction more intuitive and responsive.
 
-### Training and Evaluation:
-
-- Training the CNN model on the training data.
-- Evaluating the model performance using the test data.
-- Plotting training history (loss and accuracy over epochs).
-
-### Prediction and Visualization:
-
-- Implementing functions to predict labels from new images.
-- Visualizing predictions alongside the corresponding test images.
-- Converting predicted labels to alphabetic characters (e.g., 'W', 'E', 'L', etc.).
-
-### Text-to-Speech Integration:
-
-- Using gTTS library to convert predicted words into speech.
-- Generating audio files for predicted words to facilitate accessibility.
+### Deployment:
+- The full-stack solution is deployed using Flask as the backend and React as the frontend.
+- Ensures seamless interaction between the user interface and the trained model.
 
 ## Dependencies
 
 - Python 3.x
 - TensorFlow
 - Keras
-- Pandas
-- NumPy
-- Matplotlib
+- Flask
 - OpenCV (cv2)
 - gTTS
+- Pyttsx3
+- React
+- Axios (for handling frontend-backend communication)
+- NumPy
+- Pandas
+
